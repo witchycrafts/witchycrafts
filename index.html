@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witchycrafts | Artifacts of the Earth</title>
+    <style>
+        /* CSS Styling - Setting the Magical Aesthetic */
+        :root {
+            --bg-color: #121212; /* Deep charcoal black */
+            --card-bg: #1c1c1c; /* Slightly lighter black for product boxes */
+            --text-main: #f5f5f5; /* Clean parchment white */
+            --text-muted: #a0a0a0; /* Muted gray for secondary text */
+            --accent-gold: #d4af37; /* Warm gold for links and details */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Header Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-family: 'Georgia', serif;
+            letter-spacing: 3px;
+            color: var(--text-main);
+        }
+
+        nav a {
+            margin-left: 2rem;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        nav a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            background-color: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.8rem 2rem;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-color);
+        }
+
+        /* Philosophy Section */
+        .philosophy {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .philosophy h2 {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .philosophy p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Product Grid */
+        .grid-container {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .grid-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #2a2a2a;
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0 0 1.5rem 0;
+            padding: 0 1rem;
+        }
+
+        /* About Section */
+        .about-preview {
+            max-width: 800px;
+            margin: 6rem auto;
+            padding: 4rem 2rem;
+            border-top: 1px solid #2a2a2a;
+            text-align: center;
+        }
+
+        .about-preview h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-preview p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-top: 1px solid #1c1c1c;
+            color: #555;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        footer .socials {
+            margin-top: 1rem;
+        }
+
+        footer .socials a {
+            margin: 0 1rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            header { padding: 2rem; flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 1rem; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">WITCHYCRAFTS</div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">The Collection</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Artifacts of the Earth.<br>Handcrafted for Ritual.</h1>
+        <p>Intentionally designed, raw-textured, and made by hand in the Pacific Northwest. Explore an authentic collection of raw textiles, pure botanical incenses, and hand-carved staves.</p>
+        <button class="btn" onclick="alert('Gallery coming soon!')">Explore the Collection</button>
+    </section>
+
+    <section class="philosophy">
+        <h2>The Beauty of the Imperfect</h2>
+        <p>"At Witchycrafts, we believe that true magic lies in the raw, unaltered textures of nature. Our items are born from the earth and shaped entirely by hand. We intentionally avoid mass-manufactured bases—our incense is pressed pure from ground botanicals without a trace of gunpowder, and our staves retain the unique, weathered soul of the wood they came from. We lean into the beautiful, raw imperfections that make every piece a living artifact."</p>
+    </section>
+
+    <section class="grid-container">
+        <h2 class="grid-title">The Featured Collections</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <img src="textiles.jpg" alt="Woven and Raw Textiles" style="width:100%; height:300px; object-fit:cover;">
+                <h3>Woven & Raw</h3>
+                <p>Hand-sewn and created pieces of magic wear.</p>
+                <a href="#">Explore Textiles →</a>
+            </div>
+
+            <div class="card">
+                <img src="incense.jpg" alt="Pure Smoke Handmade Incense" style="width:100%; height:300px; object-fit:cover;">
+                <h3>Pure Smoke</h3>
+                <p>Gunpowder-free incense pressed pure from raw ground botanicals.</p>
+                <a href="#">Explore Incense →</a>
+            </div>
+
+            <div class="card">
+                <img src="baths.jpg" alt="Botanical Baths and Salts" style="width:100%; height:300px; object-fit:cover;">
+                <h3>Botanical Baths</h3>
+                <p>Handpicked botanical blends and purified herbal waters.</p>
+                <a href="#">Explore Waters →</a>
+            </div>
+
+            <div class="card">
+                <img src="staves.jpg" alt="Carved Staves and Driftwood" style="width:100%; height:300px; object-fit:cover;">
+                <h3>Staves & Driftwood</h3>
+                <p>Sourced and uniquely carved walking sticks from the Pacific coast.</p>
+                <a href="#">Explore Woodwork →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about-preview">
+        <h2>Meet the Maker</h2>
+        <p>Hi, I’m Antonio. I create out of a small studio in Vancouver, surrounded by towering trees and coastal mist. Witchycrafts started as a way to honor the natural world through slow, traditional crafting. Whether I am foraging for wild herbs, purifying botanical waters, or carving driftwood found along the Pacific coast, my hands are in every single step of the process. Thank you for bringing a piece of this craft into your sacred spaces.</p>
+    </section>
+
+    <footer>
+        <div>&copy; 2026 Witchycrafts. Made with intention in Vancouver, BC.</div>
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+        </div>
+    </footer>
+
+</body>
+</html>
